@@ -1,4 +1,4 @@
-Java异常体系：
+Java异常体系:
 --Throwable
 	--Exception
 		--RuntimeException
@@ -6,6 +6,6 @@ Java异常体系：
 		--自定义异常
 	--Error
 
-RuntimeExceptin: 
+RuntimeExceptin:  
 	NullPointException:空指针异常
 	ArrayIndexOutOfBoundsException：数组越界异常
