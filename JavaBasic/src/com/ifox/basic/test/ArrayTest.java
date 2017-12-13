@@ -13,6 +13,7 @@ public class ArrayTest {
 		int[] ints1 = new int[5];		//数组必须初始化才能使用，即分配内存空间,值为该类型的默认值(0)
 		int[] ints2 = new int[] {1, 2};		//静态初始化：系统自动判断数组大小
 		int[] ints3 = {1, 2, 3};		//方式2的简略写法
+		System.out.println(ints1.getClass().getSimpleName());
 		System.out.println(ints1.length);        //5
 		for (int i : ints1) {
 			System.out.println(i);

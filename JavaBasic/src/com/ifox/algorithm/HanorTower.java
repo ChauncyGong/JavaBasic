@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
-//ººÂÞËþ³ÌÐò
+//æ±‰ç½—å¡”å®žçŽ°
 public class HanorTower {
 	
 	@Test
@@ -60,7 +60,7 @@ class Column {
 	}
 	
 	public void moveTo(Column to) {
-		System.out.println(name + " ÒÆ¶¯µ½ " + to.name);
+		System.out.println(name + "ç§»åŠ¨åˆ°" + to.name);
 		int i = 0;
 		int obj = disks[0];
 		for(i = 0; i < disks.length - 1; i++) {
