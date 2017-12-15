@@ -10,9 +10,9 @@ public class ArrayTest {
 	
 	@Test
 	public void testArray() {
-		int[] ints1 = new int[5];		//Êı×é±ØĞë³õÊ¼»¯²ÅÄÜÊ¹ÓÃ£¬¼´·ÖÅäÄÚ´æ¿Õ¼ä,ÖµÎª¸ÃÀàĞÍµÄÄ¬ÈÏÖµ(0)
-		int[] ints2 = new int[] {1, 2};		//¾²Ì¬³õÊ¼»¯£ºÏµÍ³×Ô¶¯ÅĞ¶ÏÊı×é´óĞ¡
-		int[] ints3 = {1, 2, 3};		//·½Ê½2µÄ¼òÂÔĞ´·¨
+		int[] ints1 = new int[5];		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½Õ¼ï¿½,ÖµÎªï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½Ä¬ï¿½ï¿½Öµ(0)
+		int[] ints2 = new int[] {1, 2};		//ï¿½ï¿½Ì¬ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½Ô¶ï¿½ï¿½Ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¡
+		int[] ints3 = {1, 2, 3};		//ï¿½ï¿½Ê½2ï¿½Ä¼ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½
 		System.out.println(ints1.getClass().getSimpleName());
 		System.out.println(ints1.length);        //5
 		for (int i : ints1) {
@@ -33,13 +33,13 @@ public class ArrayTest {
 			System.out.println(object);
 		}
 		/**
-		 * ´Ë´¦Ö±½Ó×ª»¯»á³öÎÊÌâ
+		 * ï¿½Ë´ï¿½Ö±ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		 * java.lang.ClassCastException: [Ljava.lang.Object; cannot be cast to [Ljava.lang.String
-		 * object ²»ÄÜ×ª»¯Îª string  ÏòÏÂ×ªĞÍµÄÎÊÌâ
+		 * object ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½Îª string  ï¿½ï¿½ï¿½ï¿½×ªï¿½Íµï¿½ï¿½ï¿½ï¿½ï¿½
 		 */
 		//String[] strs = (String[]) list.toArray();
 		/**
-		 * ½â¾ö°ì·¨£º²ÉÓÃÈçÏÂ·½Ê½
+		 * ï¿½ï¿½ï¿½ï¿½ì·¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½Ê½
 		 */
 		String[] strs = new String[list.size()];
 		strs = list.toArray(strs);
@@ -53,10 +53,10 @@ public class ArrayTest {
 //		int[] objs = new int[] {1, 2, 3};
 		Integer[] objs = new Integer[] {new Integer(1), new Integer(2)};
 		/**
-		 * ´Ë´¦List<T> Arrays.asList(T ...)²»ÄÜ´¦Àí int[]µÈ»ù±¾ÀàĞÍÊı×é£¬ µ«ÄÜ´¦Àí¶ÔÏóÊı×é
+		 * ï¿½Ë´ï¿½List<T> Arrays.asList(T ...)ï¿½ï¿½ï¿½Ü´ï¿½ï¿½ï¿½ int[]ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é£¬ ï¿½ï¿½ï¿½Ü´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		 */
 //		List<String> list = Arrays.asList(objs);
-//		List<int> list = Arrays.asList(objs);   //ÒòÎªList<int>ÕâÖÖĞ´·¨ÊÇ´íÎóµÄ£¬ListÖ»ÄÜ³ÖÓĞ¶ÔÏó
+//		List<int> list = Arrays.asList(objs);   //ï¿½ï¿½ÎªList<int>ï¿½ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½Ç´ï¿½ï¿½ï¿½Ä£ï¿½ListÖ»ï¿½Ü³ï¿½ï¿½Ğ¶ï¿½ï¿½ï¿½
 		List<Integer> list = Arrays.asList(objs);
 		for (Integer obj : list) {
 			System.out.println(obj);
