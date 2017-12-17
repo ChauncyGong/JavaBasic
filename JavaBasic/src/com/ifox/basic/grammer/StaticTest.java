@@ -1,4 +1,4 @@
-package com.ifox.basic.test;
+package com.ifox.basic.grammer;
 
 public class StaticTest {
 	

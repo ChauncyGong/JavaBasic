@@ -1,5 +1,9 @@
 package com.ifox.interview;
-
+/**
+ * 考察继承结构对象方法执行过程
+ * @author Chauncy
+ *
+ */
 public class Extend1 {
 	
 	public static void main(String[] args) {

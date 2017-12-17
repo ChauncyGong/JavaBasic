@@ -1,4 +1,4 @@
-package com.ifox.basic.test;
+package com.ifox.basic.grammer;
 
 import java.util.ArrayList;
 import java.util.Arrays;

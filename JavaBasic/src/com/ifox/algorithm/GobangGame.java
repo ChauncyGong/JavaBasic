@@ -1,28 +1,37 @@
 package com.ifox.algorithm;
 
 import java.util.Scanner;
-
+//基于命令行的五子棋游戏
 public class GobangGame {
 	
-	public static final int CHECKERBOARD_DEFAULT_SIZE = 20;
+	public static final int CHECKERBOARD_DEFAULT_SIZE = 20;	//默认棋盘大小
 	
-	public static final char DEFAULT = '-';
+	public static final char DEFAULT = '-';					//默认棋盘格子显示符号
 	
-	public static final char RED = 'X';
+	public static final char RED = 'X';						//红方棋子
 	
-	public static final char BLACK = '0';
+	public static final char BLACK = '0';					//黑方棋子
 	
 	char[][] checkerboard;
 	
-	int size;
+	int size;			//棋盘尺寸
 	
-	int curX;
+	int curX;			//当前落子X坐标
 	
-	int curY;
+	int curY;			//当前落子Y坐标
 	
-	char role;
+	char role;			//落子方
 	
-	public void init(int size) {
+	public GobangGame() {
+		init(CHECKERBOARD_DEFAULT_SIZE);
+	}
+	
+	public GobangGame(int size) {
+		init(size);
+	}
+	
+	//初始化棋盘
+	private void init(int size) {
 		this.size = size;
 		checkerboard = new char[size][size];
 		for (int i = 0; i < size; i++) {
@@ -33,6 +42,7 @@ public class GobangGame {
 		printCheckerboard();
 	}
 	
+	//下棋
 	public void chess(int x, int y, char c) throws Exception{
 		if(x < 0 || y < 0 || x > size -1 || y > size -1 || checkerboard[y][x] != DEFAULT) {
 			throw new Exception("参数错误");
@@ -44,6 +54,7 @@ public class GobangGame {
 		printCheckerboard();
 	}
 	
+	//检查是否存在五子连珠
 	public boolean checkWin() {
 		return getMax(checkHorizontal(),checkVertical(),checkSlash(), checkBackSlash()) > 4;
 	}
@@ -161,15 +172,14 @@ public class GobangGame {
 		System.out.print(sb.toString());
 	}
 	
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		//初始化游戏
 		GobangGame game = new GobangGame();
-		@SuppressWarnings("resource")
-		Scanner scanner = new Scanner(System.in); 
-		game.init(CHECKERBOARD_DEFAULT_SIZE);
 		System.out.println("来一场你死我活的SOLO吧!");
 		
 		boolean turn = false;
+		Scanner scanner = new Scanner(System.in); 
 		while(true) {
 			System.out.print("请" + (turn ? "红方":"黑方")+"落子(格式为 x y) :");
 			char c = turn ? RED : BLACK;
@@ -192,6 +202,4 @@ public class GobangGame {
 			turn = !turn;
 		}
 	}
-	
-	
 }

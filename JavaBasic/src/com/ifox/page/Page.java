@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 实现分页
+ * 瀹炵幇鍒嗛〉
  * @author Chauncy
  *
  */
@@ -15,7 +15,7 @@ public class Page<T> {
 	
 	public static final int NAVIGATE_SIZE = 5;
 
-	//总记录数
+	//鎬昏褰曟暟
 	private int totalCount;
 	
 	private int pageCount;
@@ -94,7 +94,7 @@ public class Page<T> {
 	}
 
 	
-	//测试代码
+	//娴嬭瘯浠ｇ爜
 	public static void main(String[] args) {
 		
 		int pageNo = 16;

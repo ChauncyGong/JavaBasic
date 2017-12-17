@@ -2,17 +2,28 @@ package com.ifox.algorithm;
 
 import org.junit.Test;
 
-//杨辉三角实现
+/**
+ * 杨辉三角实现
+ * @author Chauncy
+ *
+ */
 public class YHTriangle {
 	
 	@Test
 	public void run() throws Exception {
-		
 		printTriangle(5);
 	}
 	
+	/**
+	 * 
+	 * @param floors 楼层数
+	 * @return 表示杨辉三角的int型的二维数组对象
+	 * @throws Exception 楼层数不能小于3
+	 */
 	public int[][] getTriangle (int floors) throws Exception {
-		if (floors < 3) throw new Exception("参数错误");
+		if (floors < 3) {
+			throw new Exception("参数错误");
+		}
 		int[][] triangelArray = new int[floors][]; 
 		triangelArray[0] = new int[]{1};
 		triangelArray[1] = new int[]{1, 1};
@@ -27,6 +38,7 @@ public class YHTriangle {
 		return triangelArray;
 	}
 	
+	//打印杨辉三角
 	public void printTriangle(int floors) throws Exception {
 		for (int[] column : getTriangle(floors)) {
 			for (int i = column.length; i < floors; i++) {

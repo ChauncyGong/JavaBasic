@@ -1,15 +1,15 @@
-package com.ifox.basic.test;
+package com.ifox.basic.grammer;
 
 import org.junit.Test;
 
 /**
- * Ñ­»·Óï¾ä²âÊÔ
+ * Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * @author Chauncy
  *
  */
 public class LoopTest {
 	
-	//Êä³öÈý½ÇÐÎ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	@Test
 	public void printTriangle() {
 		int i, j, k;
@@ -24,14 +24,14 @@ public class LoopTest {
 		}
 	}
 	
-	//Êä³ö¾Å¾Å³Ë·¨±í
+	//ï¿½ï¿½ï¿½ï¿½Å¾Å³Ë·ï¿½ï¿½ï¿½
 	@Test
 	public void printMultTable() {
 		int i, j;
-		outer:for (i = 1; i < 10; i++) {         //ÉèÖÃÑ­»·±êÖ¾
+		outer:for (i = 1; i < 10; i++) {         //ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½ï¿½Ö¾
 			for (j = 1; j <= i; j++) {
 				if(i == 6) {
-					break outer;             //ÄÚ²ãÑ­»·ÖÐ½áÊøÍâ²ãÑ­»·
+					break outer;             //ï¿½Ú²ï¿½Ñ­ï¿½ï¿½ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½
 				}
 				System.out.print(j + "*" + i + "=" + i * j + "	");
 				
@@ -40,7 +40,7 @@ public class LoopTest {
 		}
 	}
 	
-	//±éÀú×Ö·û´®
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
 	@Test
 	public void ergodicString() {
 		String str = "abcdefg";

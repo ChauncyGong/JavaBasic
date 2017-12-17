@@ -1,11 +1,11 @@
-package com.ifox.basic.test;
+package com.ifox.basic.grammer;
 
 public class SwitchTest {
 
 	public static void main(String[] args) {
 		String str = "aa";
-		//long l = 110;                   // switch²»Ö§³ÖlongÀàÐÍ
-		//Integer integer = new Integer(11);    //Ö§³Öchar,int,short,byte¼°Æä°ü×°ÀàÐÍ£¬ÁíÍâÃ¶¾ÙºÍ×Ö·û´®Ò²Ö§³Ö
+		//long l = 110;                   // switchï¿½ï¿½Ö§ï¿½ï¿½longï¿½ï¿½ï¿½ï¿½
+		//Integer integer = new Integer(11);    //Ö§ï¿½ï¿½char,int,short,byteï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½Ã¶ï¿½Ùºï¿½ï¿½Ö·ï¿½ï¿½ï¿½Ò²Ö§ï¿½ï¿½
 		switch (str) {
 		case "aa":
 			System.out.println("aa");

@@ -1,5 +1,10 @@
-package com.ifox.basic.extend_test;
+package com.ifox.basic.extend;
 
+/**
+ * 证明多态性
+ * @author Chauncy
+ *
+ */
 public class SuperClass {
 	
 	public String name = "Supper.name";

@@ -1,9 +1,9 @@
-package com.ifox.basic.test;
+package com.ifox.basic.grammer;
 
 import org.junit.Test;
 
 /**
- * »ù´¡Óï·¨²âÊÔ
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï·¨ï¿½ï¿½ï¿½ï¿½
  * @author Chauncy
  *
  */
@@ -11,7 +11,7 @@ public class GrammerTest {
 	
     public static void main(String[] args) {
 //      System.out.println(args[0].getClass());
-//      System.out.println(args[1].getClass());           //²ÎÊý¶¼ÎªStringÀàÐÍ
+//      System.out.println(args[1].getClass());           //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªStringï¿½ï¿½ï¿½ï¿½
     }
     
     @Test
@@ -24,7 +24,7 @@ public class GrammerTest {
         boolean bool = true;
         System.out.println(i);
         System.out.println(f);
-        System.out.println(f - 20);               //Ð¡Êý¾«¶ÈËðÊ§ÎÊÌâ
+        System.out.println(f - 20);               //Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ï¿½ï¿½
         System.out.println(d);
         System.out.println(c);
         System.out.println(b);
@@ -33,11 +33,11 @@ public class GrammerTest {
 
     @Test
     public void test3() {
-        int x = 110;                 //Ö±½ÓÁ¿Ä¬ÈÏÎªintÀàÐÍ
-        int y = 0b1101110;            //¶þ½øÖÆ±íÊ¾0b,°Ë½øÖÆ£º0,Ê®Áù½øÖÆ0x
+        int x = 110;                 //Ö±ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½Îªintï¿½ï¿½ï¿½ï¿½
+        int y = 0b1101110;            //ï¿½ï¿½ï¿½ï¿½ï¿½Æ±ï¿½Ê¾0b,ï¿½Ë½ï¿½ï¿½Æ£ï¿½0,Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0x
         int z = 0x41;
         byte b = 127;
-        char c = '\u0041';           //unicode±àÂë£º(\\u)4Î»Ê®Áù½øÖÆ±íÊ¾×Ö·û 4*4=16=2*8Á½¸ö×Ö½Ú
+        char c = '\u0041';           //unicodeï¿½ï¿½ï¿½ë£º(\\u)4Î»Ê®ï¿½ï¿½ï¿½ï¿½ï¿½Æ±ï¿½Ê¾ï¿½Ö·ï¿½ 4*4=16=2*8ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½
         char c1 = 'a';
         char c2 = 22;
         long l = 23L;
@@ -59,15 +59,15 @@ public class GrammerTest {
 
         char c1 = 'C';
         char c2 = 'D';             
-        //Á½¸öbyte,char,shortÏà¼Ó¶¼Îªint
+        //ï¿½ï¿½ï¿½ï¿½byte,char,shortï¿½ï¿½Ó¶ï¿½Îªint
         System.out.println(c1+c2);
 
 //	    System.out.println(10/0);
         System.out.println("result :"+10.0/0);
-        System.out.println(10/0.0);                //   10/0.0=ÎÞÇî´ó
+        System.out.println(10/0.0);                //   10/0.0=ï¿½ï¿½ï¿½ï¿½ï¿½
         System.out.println(0/0.0);                 //    0.0/0.0=NaN
         double a = 0/0.0;
-        System.out.println(a == a);               //    NaN ²»µÈÓÚNaN
+        System.out.println(a == a);               //    NaN ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½NaN
         System.out.println(10 % 3);
         System.out.println(9.0 % 3);
     }

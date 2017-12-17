@@ -1,4 +1,4 @@
-package com.ifox.list.test;
+package com.ifox.connection;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,14 +8,14 @@ import org.junit.Test;
 public class ArrayListTest {
 
 	/**
-	 * É¾³ýListÖÐÔªËØ²âÊÔ£¬Ê¹ÓÃArrayList
+	 * É¾ï¿½ï¿½Listï¿½ï¿½Ôªï¿½Ø²ï¿½ï¿½Ô£ï¿½Ê¹ï¿½ï¿½ArrayList
 	 */
 	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	public void removeListTest() {
 		//List<Integer> integers = Arrays.asList(new Integer(1), new Integer(2), new Integer(3));
 		/**
-		 * Å×³öÒì³£java.lang.UnsupportedOperationException
+		 * ï¿½×³ï¿½ï¿½ì³£java.lang.UnsupportedOperationException
 		 */
 		//integers.remove(new Integer(1));
 		List<Integer> integers = new ArrayList<>();
@@ -25,30 +25,30 @@ public class ArrayListTest {
 		integers.add(new Integer(3));
 		
 		/**
-		 * ²é¿´Ô´Âë¿ÉÖª´Ë´¦Í¨¹ýequals·½·¨±È½ÏÉ¾³ýÏàµÈµÄ¶ÔÏó£¬¶ø²»Ò»¶¨É¾³ýµÄÒ»¶¨ÊÇÍ¬Ò»¸ö¶ÔÏó
+		 * ï¿½é¿´Ô´ï¿½ï¿½ï¿½Öªï¿½Ë´ï¿½Í¨ï¿½ï¿½equalsï¿½ï¿½ï¿½ï¿½ï¿½È½ï¿½É¾ï¿½ï¿½ï¿½ï¿½ÈµÄ¶ï¿½ï¿½ó£¬¶ï¿½ï¿½ï¿½Ò»ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Í¬Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		 */
 		//integers.remove(new Integer(1));
 		/**
-		 * ·¢ÏÖ´Ë´¦ÊÇÖ¸É¾³ýÎ»ÖÃÎª2µÄÔªËØ£¬²¢Ã»ÓÐ½øÐÐ×Ô¶¯ÀàÐÍ×ª»»
+		 * ï¿½ï¿½ï¿½Ö´Ë´ï¿½ï¿½ï¿½Ö¸É¾ï¿½ï¿½Î»ï¿½ï¿½Îª2ï¿½ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½Ã»ï¿½Ð½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½
 		 */
-		integers.remove(2);			//Êä³ö 2 3
+		integers.remove(2);			//ï¿½ï¿½ï¿½ 2 3
 		for (Integer integer : integers) {
 			System.out.println(integer);
 		}
 		
-		System.out.println("------ÎÒÊÇ·Ö¸îÏß---------");
+		System.out.println("------ï¿½ï¿½ï¿½Ç·Ö¸ï¿½ï¿½ï¿½---------");
 		
 		List<String> strings = new ArrayList<>();
 		strings.add(new Integer(2).toString());
 		strings.add(new Integer(1).toString());
 		strings.add(new Integer(3).toString());
 		/**
-		 * ·¢ÏÖ´Ë´¦²¢Ã»ÓÐ·¢ÉúÖ§·ðÄÇ¸öÀàÐÍ×ª»»¶øµ÷ÓÃremove(int x): ´Ë·½·¨·µ»ØÖ¸¶¨Î»ÖÃÉ¾³ýµÄÔªËØ
-		 * ¶øÊÇµ÷ÓÃÁËremove(object o)µÄ·½·¨ 	:´Ë·½·¨·µ»ØÊÇ·ñÉ¾³ýboolean				
+		 * ï¿½ï¿½ï¿½Ö´Ë´ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½Ö§ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½remove(int x): ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Î»ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
+		 * ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½ï¿½ï¿½remove(object o)ï¿½Ä·ï¿½ï¿½ï¿½ 	:ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½É¾ï¿½ï¿½boolean				
 		 */
 		strings.remove(new Integer(2));
 		for (String string : strings) {
-			System.out.println(string);   //Êä³ö 2 1 3
+			System.out.println(string);   //ï¿½ï¿½ï¿½ 2 1 3
 		}
 	}
 }

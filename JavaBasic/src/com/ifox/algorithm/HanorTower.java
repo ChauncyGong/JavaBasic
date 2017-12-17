@@ -10,13 +10,14 @@ public class HanorTower {
 	@Test
 	public void run() {
 		
-		int default_size = 10;
-		Column A = new Column("A", default_size, true);
-		Column B = new Column("B", default_size);
-		Column C = new Column("C", default_size);
+		final int DEFAULT_SIZE = 20;
+		
+		Column A = new Column("A", DEFAULT_SIZE, true);
+		Column B = new Column("B", DEFAULT_SIZE);
+		Column C = new Column("C", DEFAULT_SIZE);
 		
 		System.out.println("" + A + B + C);
-		exchange(A, B, C, default_size);
+		exchange(A, B, C, DEFAULT_SIZE);
 		System.out.println("" + A + B + C);
 
 	}
