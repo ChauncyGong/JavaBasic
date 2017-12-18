@@ -3,13 +3,31 @@ package com.ifox.basic.grammer;
 import org.junit.Test;
 
 /**
- * ѭ��������
  * @author Chauncy
  *
  */
-public class LoopTest {
+public class ControlTest {
 	
-	//���������
+	public void SwitchTest() {
+		String str = "AA";
+		//long l = 110;
+		//Integer integer = 11;
+		/**
+		 * 	switch支持byte, char, short, int及其包装类型和String, enum
+		 */
+		switch (str) {
+		case "AA":							//switch后只能跟常量	
+			System.out.println("AA");
+			break;
+		case "BB": {
+			System.out.println("BB");
+		}
+			
+		default:
+			break;
+		}
+	}
+	
 	@Test
 	public void printTriangle() {
 		int i, j, k;
@@ -24,29 +42,27 @@ public class LoopTest {
 		}
 	}
 	
-	//����žų˷���
+	@SuppressWarnings("unused")
 	@Test
 	public void printMultTable() {
 		int i, j;
-		outer:for (i = 1; i < 10; i++) {         //����ѭ����־
-			for (j = 1; j <= i; j++) {
+		outer:for (i = 1; i < 10; i++) {			//可以指定loop标签
+			inner:for (j = 1; j <= i; j++) {
 				if(i == 6) {
-					break outer;             //�ڲ�ѭ���н������ѭ��
+					break outer;					//终止外层循环
 				}
 				System.out.print(j + "*" + i + "=" + i * j + "	");
 				
 			}
-			System.out.println();
 		}
+		System.out.println();
 	}
 	
-	//�����ַ���
 	@Test
 	public void ergodicString() {
 		String str = "abcdefg";
 		for (char c : str.toCharArray()) {
 			System.out.println(c);
-			
 		}
 	}
 }

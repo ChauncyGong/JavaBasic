@@ -10,36 +10,31 @@ public class ArrayTest {
 	
 	@Test
 	public void testArray() {
-		int[] ints1 = new int[5];		//��������ʼ������ʹ�ã��������ڴ�ռ�,ֵΪ�����͵�Ĭ��ֵ(0)
-		int[] ints2 = new int[] {1, 2};		//��̬��ʼ����ϵͳ�Զ��ж������С
-		int[] ints3 = {1, 2, 3};		//��ʽ2�ļ���д��
+		/**
+		 * 三种初始化方式
+		 */
+		int[] ints1 = new int[5];		//动态初始化
+		int[] ints2 = new int[] {1, 2};		//静态初始化
+		int[] ints3 = {1, 2, 3};		//同上
 		System.out.println(ints1.getClass().getSimpleName());
 		System.out.println(ints1.length);        //5
-		for (int i : ints1) {
-			System.out.println(i);
-		}
 		System.out.println(ints2.length);		//2
 		System.out.println(ints3.length);		//3
 		
 	}
 	
 	@Test
-	public void testListToArray() {
+	public void listToArray() {
 		List<String> list = new ArrayList<>();
 		for(int i =0; i < 10; i++) {
 			list.add("" + i);
 		}
-		for (Object object : list) {
-			System.out.println(object);
-		}
 		/**
-		 * �˴�ֱ��ת���������
-		 * java.lang.ClassCastException: [Ljava.lang.Object; cannot be cast to [Ljava.lang.String
-		 * object ����ת��Ϊ string  ����ת�͵�����
+		 * java.lang.ClassCastException: Object[] cannot be cast to String[]
 		 */
-		//String[] strs = (String[]) list.toArray();
+//		String[] strs = (String[]) list.toArray();	//返回类型是Object[]，不能转化为String[]
 		/**
-		 * ����취���������·�ʽ
+		 * 采用如下方式
 		 */
 		String[] strs = new String[list.size()];
 		strs = list.toArray(strs);
@@ -47,18 +42,21 @@ public class ArrayTest {
 	}
 	
 	@Test
-	public void testArrayToList() {
+	public void arrayToList() {
 		
-//		String[] objs = new String[] {"11","22"};
-//		int[] objs = new int[] {1, 2, 3};
+//		int[] ints = new int[] {1, 2, 3};
 		Integer[] objs = new Integer[] {new Integer(1), new Integer(2)};
+		String[] strings = new String[] {"11","22"};
 		/**
-		 * �˴�List<T> Arrays.asList(T ...)���ܴ��� int[]�Ȼ����������飬 ���ܴ����������
+		 * 	List<T> Arrays.asList(T ...) 可以传递对象数组转化为List
 		 */
-//		List<String> list = Arrays.asList(objs);
-//		List<int> list = Arrays.asList(objs);   //��ΪList<int>����д���Ǵ���ģ�Listֻ�ܳ��ж���
-		List<Integer> list = Arrays.asList(objs);
-		for (Integer obj : list) {
+//		List<int> list = Arrays.asList(ints);
+		List<Integer> list1 = Arrays.asList(objs);
+		List<String> list2 = Arrays.asList(strings);
+		for (Integer obj : list1) {
+			System.out.println(obj);
+		}
+		for (String obj : list2) {
 			System.out.println(obj);
 		}
 	}

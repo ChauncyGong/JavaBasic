@@ -20,11 +20,12 @@ public class FinalClass {
 
 	public static void main(String[] args) {
 		System.out.println(FinalClass.a);
-		System.out.println(SonClass1.a);
+		System.out.println(SonClass.a);
+		new SonClass().print(0);
 	}
 }
 
-class SonClass1 extends FinalClass{
+class SonClass extends FinalClass{
 	
 //	public void print(int x) {				//final方法不能被复写
 //		System.out.println("print");
