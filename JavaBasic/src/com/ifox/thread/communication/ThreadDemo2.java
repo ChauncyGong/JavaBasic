@@ -19,7 +19,6 @@ public class ThreadDemo2 {
 		for (int i = 0; i < cars.length; i++) {
 			new Thread(cars[i]).start();
 		}
-//			new Thread(cars[0]).start();
 	}
 	
 }

@@ -24,7 +24,6 @@ class Apple4 implements Runnable{
 					count--;
 				}
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} finally {
 				lock.unlock();		//释放锁

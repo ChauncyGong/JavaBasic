@@ -15,7 +15,6 @@ class Apple2 implements Runnable{
 						count--;
 					}
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}

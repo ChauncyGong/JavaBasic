@@ -1,0 +1,30 @@
+package com.ifox.io;
+
+import java.io.File;
+
+public class ListFile {
+	
+	public static void listAllFile(File file) {
+//		if (file.isDirectory()) {
+//			for (File file2 : file.listFiles()) {
+//				listAllFile(file2);
+//			}
+//		}else {
+//			System.out.println(file);
+//		}
+		File[] files = file.listFiles();
+		for (File f : files) {
+			if(f.isDirectory()) {
+				listAllFile(f);
+			}else {
+				System.out.println(f);
+			}
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		File file = new File("e:\\");
+		listAllFile(file);
+	}
+}
