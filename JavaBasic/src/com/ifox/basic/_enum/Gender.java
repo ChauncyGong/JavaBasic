@@ -14,7 +14,7 @@ import java.util.Arrays;
 public enum Gender implements EnumDesc{
 //	MALE, FAMALE;
 	
-	MALE("男"){
+	MALE("男"){			//这里类似于匿名内部类，创建的实例对象需要实现接口中的方法
 		@Override
 		public void info() {
 			System.out.println("nan");

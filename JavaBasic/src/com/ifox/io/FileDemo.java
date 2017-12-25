@@ -1,6 +1,7 @@
 package com.ifox.io;
 
 import java.io.File;
+import java.io.FileReader;
 
 import org.junit.Test;
 
@@ -47,4 +48,29 @@ public class FileDemo {
 			System.out.println(file2);
 		}
 	}
+	
+	@Test
+	public void testFileIO() throws Exception {
+		
+	}
+	
+	public static void main(String[] args) throws Exception {
+		File src = new File("file\\a.txt");
+//		FileInputStream out = new FileInputStream(src);
+//		byte[] buffer = new byte[5];
+//		int len = 0;
+//		while ((len = out.read(buffer)) > 0) {
+//			System.out.println(new String(buffer, 0, len));
+//		}
+//		out.close();
+		
+		FileReader reader = new FileReader(src);
+		char[] buffer = new char[5];
+		int len = 0;
+		while ((len = reader.read(buffer)) > 0) {
+			System.out.println(new String(buffer, 0, len));
+		}
+		reader.close();
+	}
+	
 }

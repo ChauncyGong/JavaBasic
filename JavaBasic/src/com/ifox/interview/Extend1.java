@@ -35,7 +35,7 @@ public class Extend1 {
 			setValue(getValue() - 3);
 		}
 		public void setValue(int value) {        //方法覆盖
-			super.setValue(2*value);		//调用父类方法
+			super.setValue(2 * value);		//调用父类方法
 		}
 	}
 }

@@ -1,6 +1,7 @@
 package com.ifox.algorithm;
 
 import java.util.Scanner;
+
 //基于命令行的五子棋游戏
 public class GobangGame {
 	

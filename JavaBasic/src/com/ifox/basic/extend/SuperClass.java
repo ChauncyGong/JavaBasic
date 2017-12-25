@@ -40,7 +40,10 @@ public class SuperClass {
 		 */
 		sub.doStaticWork();
 		
-		sub.dowork();          //此处方法才是多态运行
+		sub.dowork();          //被子类覆盖的方法多态运行
+		
+//		sub.subMethod();		//此处会检查父类中是否存在该方法，不存在自然编译报错
+								//证明多态只存在方法覆盖的情况
 	}
 }
 
@@ -51,10 +54,14 @@ class SubClass extends SuperClass{
 	public String name = "Sub.name";
 	
 	public static void doStaticWork() {
-		System.out.println("Sub.staticWork");
+		System.out.println("SubClass.doStaticWork()");
 	}
 	
 	public void dowork() {
-		System.out.println("Sub work");
+		System.out.println("SubClass.dowork()");
+	}
+	
+	public void subMethod() {
+		System.out.println("SubClass.subMethod()");
 	}
 }
